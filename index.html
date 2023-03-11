@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+           <div class="containerTodo">
+                <div class="title">
+                       <h1>Faccende Quotidiane</h1>
+                </div>
+                <div class="input">
+                      <input type="text" @keyup.enter="aggiungi" v-model="newItem" placeholder="inserisci nuove faccende da fare"  name="" id="">
+                </div>
+                <div class="list">
+                      <ul>
+                        <li v-for="(element, index) in lista">{{element}} <span class="fatto"><i class="fa-solid fa-thumbs-up"></i></span><span @click="elimina(index)" class="nonFatto"><i class="fa-solid fa-trash-can"></i></span></li>
+                      </ul>
+                </div>
+                 <div class="res">
+                       <h3>{{risultato}}</h3>
+                 </div>
+           </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
