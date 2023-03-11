@@ -15,7 +15,7 @@ const app = new Vue({
      elimina:function(index){
 
             this.lista.splice(index,1)
-            this.risultato=`<b>NON HAI FATTO QUESTA FACCENDA`
+            this.risultato=`NON HAI FATTO QUESTA FACCENDA`
             setTimeout(() => {
                  this.risultato=''
             }, 2000);
